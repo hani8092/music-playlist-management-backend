@@ -12,7 +12,9 @@ import { ConfigModule } from '@nestjs/config';
     ConfigModule.forRoot({
       envFilePath: ['.env'],
     }),
-    MongooseModule.forRoot(process.env.DB_CONNECTION_STRING),
+    MongooseModule.forRoot(
+      'mongodb+srv://hanipatel:ACRL5aq8mRy1d5jg@hani.lnyou.mongodb.net/music-playlist-management',
+    ),
     UsersModule,
     PlaylistsModule,
     SongsModule,
